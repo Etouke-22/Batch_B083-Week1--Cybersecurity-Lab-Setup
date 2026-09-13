@@ -75,9 +75,12 @@ Network Adapter Configuration:
 - Connection Type: NAT Network
 - Network: "NatNetwork"
 - Adapter Type: Intel PRO/1000 MT Desktop
-![image alt]()
-  
+![image alt](https://github.com/Sama-41/Cybersecurity-Lab-Setup/blob/main/Screenshot_3.png?raw=true)
 
+# Step 5: Configure Kali Linux Network
+
+  
+![image alt]()
 
 
 
