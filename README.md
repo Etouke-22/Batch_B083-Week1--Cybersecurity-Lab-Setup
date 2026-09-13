@@ -2,7 +2,7 @@
 Week 1 Cybersecurity Lab setup using VirtualBox and Kali Linux 
 
 
-#Overview
+Overview
 The purpose of this lab is to create an isolated environment, where cybersecurity, networking and penetration testing concepts can be practiced safely on  authorized virtual machines.
 
 
@@ -35,16 +35,13 @@ The purpose of the lab is to create an isolated environment where cybersecurity,
 | Lab Network | 10.0.0.0/24 |
 | NAT Network | CyberLab |
 | Kali IP | 10.0.0.2/24 |
+| DNS IP | 8.8.8.8 |
 
 ## Network Topology
 
-```text
-                    Internet
-                       |
-                 VirtualBox NAT
-                       |
-                  CyberLab
-                10.0.0.0/24
-                       |
-                  Kali Linux
-                   10.0.0.2
+![image alt](https://github.com/Sama-41/Cybersecurity-Lab-Setup/blob/b62d8ef8dc9aed3b604ed25278c8720ad245cd9e/Screenshot%20(29).png)
+
+
+
+                    
+                      
