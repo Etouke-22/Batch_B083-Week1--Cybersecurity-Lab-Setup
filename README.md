@@ -110,10 +110,10 @@ If a later experiment modifies the operating system or networking configuration,
 
 
 
-### Testing and verifying the Laboratory
+# Testing and verifying the Laboratory
 After completing the configuration, several checks were performed.
 
-## I. Check the IP Configuration
+#### I. Check the IP Configuration
 Open a terminal in Kali Linux and run:
 
 ip a
@@ -124,35 +124,35 @@ For the reference configuration, the address was similar to:
 
 10.0.0.2/24
 
-## II. Test the Virtual Gateway
+#### II. Test the Virtual Gateway
 Test communication with the virtual gateway:
 
 ping 10.0.0.1
 
 Successful replies indicated that Kali can communicate with the NAT Network gateway.
 
-## III. Test External Connectivity
+#### III. Test External Connectivity
 Next, test connectivity to an external IP address:
 
 ping 8.8.8.8
 
 If replies are received, the virtual machine has external IP connectivity.
 
-## IV. Test DNS
+#### IV. Test DNS
 IP connectivity alone does not prove that DNS is functioning. Test name resolution with:
 
 nslookup networkwalks.com
 
 A successful response indicates that the configured DNS service can resolve the requested domain.
 
-## V. Confirm Nmap Installation
+#### V. Confirm Nmap Installation
 Check whether Nmap is installed and available:
 
 nmap --version
 
 The command should return information about the installed Nmap version.
 
-## VI. Test the Snapshot
+#### VI. Test the Snapshot
 Finally, verified that the VirtualBox snapshot could be restored.
 
 After restoring the baseline snapshot, run:
@@ -161,9 +161,9 @@ ip a
 
 Confirmed that the machine had returned to the expected laboratory configuration.
 
-### Troubleshooting
+# Troubleshooting
 
-## Loss of Connectivity After Setting a Static Address
+### Loss of Connectivity After Setting a Static Address
 A static IPv4 configuration can occasionally result in connectivity problems depending on the Kali Linux network-management configuration.
 
 One configuration adjustment documented in the reference laboratory is:
@@ -174,7 +174,7 @@ After making a change, reconnect the network and test connectivity again.
 
 The connection name may not be "Wired connection 1" on every installation. Therefore, identifying the actual NetworkManager connection name on the system before applying an nmcli command.
 
-## Virtualization or VT-x Error
+### Virtualization or VT-x Error
 If VirtualBox reports that hardware virtualization is unavailable, check whether virtualization support is enabled in the computer's firmware.
 
 A typical procedure is:
@@ -223,7 +223,10 @@ The snapshot should also be maintained as a clean recovery point before performi
 
 
 
-
+# Tools
+- 7-zip: https://7-zip.org/download.html
+- VirtualBox: https://virtualbox.org/wiki/downloads
+- Kali Linux: https://kali.org/get-kali
 
 
 
