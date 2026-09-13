@@ -210,7 +210,7 @@ Security tools such as network scanners and penetration-testing software should 
 
 The snapshot should also be maintained as a clean recovery point before performing experiments that could alter the virtual machine.
 
-## Lessons Learnt
+# Lessons Learnt
 1. The completed laboratory provided a foundation for future cybersecurity exercises. VirtualBox supplies the virtualization layer, while Kali Linux provides the security-testing environment.
 
 2. The NAT Network allows multiple virtual machines to communicate within a controlled network, making it suitable for future exercises involving reconnaissance, vulnerability assessment, packet analysis, and other authorized security-testing activities.
