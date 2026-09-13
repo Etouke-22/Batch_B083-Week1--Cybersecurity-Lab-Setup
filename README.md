@@ -2,10 +2,6 @@
 Week 1 Cybersecurity Lab setup using VirtualBox and Kali Linux 
 
 
-Overview
-The purpose of this lab is to create an isolated environment, where cybersecurity, networking and penetration testing concepts can be practiced safely on  authorized virtual machines.
-
-
 ## Overview
 
 This project documents the setup of a local cybersecurity testing laboratory using VirtualBox and Kali Linux.
