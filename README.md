@@ -94,7 +94,7 @@ The exact procedure for entering these values may depend on the version of Kali 
 After making the configuration changes, reconnect the network or restart the relevant networking service if necessary.
 A consistent IP address makes the machine easier to identify when completing later laboratory exercises.
 
-![image alt]()
+![image alt](https://github.com/Sama-41/Cybersecurity-Lab-Setup/blob/main/Screenshot_4.png?raw=true)
 
 # Step 6 – Create a Baseline Snapshot
 Once Kali Linux has been configured and tested, create a VirtualBox snapshot.
