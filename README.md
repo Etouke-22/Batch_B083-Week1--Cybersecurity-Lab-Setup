@@ -75,7 +75,7 @@ Network Adapter Configuration:
 - Connection Type: NAT Network
 - Network: "NatNetwork"
 - Adapter Type: Intel PRO/1000 MT Desktop
-
+![image alt]()
   
 
 
