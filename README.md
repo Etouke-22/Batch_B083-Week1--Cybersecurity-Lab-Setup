@@ -110,7 +110,116 @@ If a later experiment modifies the operating system or networking configuration,
 
 
 
+## Testing and verifying the Laboratory
+After completing the configuration, several checks were performed.
 
+## - Check the IP Configuration
+Open a terminal in Kali Linux and run:
+
+ip a
+
+Checked that the expected network interface was an IPv4 address belonging to the laboratory subnet.
+
+For the reference configuration, the address was similar to:
+
+10.0.0.2/24
+
+## - Test the Virtual Gateway
+Test communication with the virtual gateway:
+
+ping 10.0.0.1
+
+Successful replies indicated that Kali can communicate with the NAT Network gateway.
+
+## Test External Connectivity
+Next, test connectivity to an external IP address:
+
+ping 8.8.8.8
+
+If replies are received, the virtual machine has external IP connectivity.
+
+## Test DNS
+IP connectivity alone does not prove that DNS is functioning. Test name resolution with:
+
+nslookup networkwalks.com
+
+A successful response indicates that the configured DNS service can resolve the requested domain.
+
+## Confirm Nmap Installation
+Check whether Nmap is installed and available:
+
+nmap --version
+
+The command should return information about the installed Nmap version.
+
+## Test the Snapshot
+Finally, verified that the VirtualBox snapshot could be restored.
+
+After restoring the baseline snapshot, run:
+
+ip a
+
+Confirmed that the machine had returned to the expected laboratory configuration.
+
+# Troubleshooting
+
+## Loss of Connectivity After Setting a Static Address
+A static IPv4 configuration can occasionally result in connectivity problems depending on the Kali Linux network-management configuration.
+
+One configuration adjustment documented in the reference laboratory is:
+
+sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
+
+After making a change, reconnect the network and test connectivity again.
+
+The connection name may not be "Wired connection 1" on every installation. Therefore, identifying the actual NetworkManager connection name on the system before applying an nmcli command.
+
+## Virtualization or VT-x Error
+If VirtualBox reports that hardware virtualization is unavailable, check whether virtualization support is enabled in the computer's firmware.
+
+A typical procedure is:
+
+Shut down or restart the computer.
+Enter the BIOS/UEFI configuration screen.
+Locate the processor or virtualization settings.
+Enable Intel VT-x or the corresponding hardware virtualization feature.
+Save the firmware settings.
+Restart the computer.
+Open VirtualBox and start the Kali Linux VM again.
+The exact BIOS/UEFI menu names differ between computer manufacturers.
+
+# Final Verification
+Before considering the laboratory complete, the following were verified:
+
+VirtualBox launched normally.
+Kali Linux started without virtualization errors.
+Kali is connected to the correct NAT Network.
+The Kali machine had the expected IPv4 configuration.
+The gateway responded to ping.
+External IP connectivity works.
+DNS resolution worked.
+Nmap is available.
+A clean VM snapshot was created.
+The snapshot can be restored successfully.
+
+
+# Security Considerations
+The laboratory should remain in a controlled environment for cybersecurity education.
+
+Security tools such as network scanners and penetration-testing software should only be used against systems that you own or have explicit permission to test. Keeping practice targets inside the dedicated virtual network helps reduce the possibility of unintentionally interacting with unrelated systems.
+
+The snapshot should also be maintained as a clean recovery point before performing experiments that could alter the virtual machine.
+
+## Lessons Learnt
+1. The completed laboratory provided a foundation for future cybersecurity exercises. VirtualBox supplies the virtualization layer, while Kali Linux provides the security-testing environment.
+
+2. The NAT Network allows multiple virtual machines to communicate within a controlled network, making it suitable for future exercises involving reconnaissance, vulnerability assessment, packet analysis, and other authorized security-testing activities.
+
+3. Creating a clean snapshot at the end of the setup is particularly useful because it provides a known working state to which the Kali machine can be returned after experimental changes.
+
+4. I learnt how to configure and verify IPv4 addressing, subnet mask, Default gateway and DNS statically. 
+
+5. The strongest approach is to supplement this procedure with your own screenshots, commands actually executed, test results, problems encountered, and observations rather than presenting the source repository's text as your own.
 
 
 
