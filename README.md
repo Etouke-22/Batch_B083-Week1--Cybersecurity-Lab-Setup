@@ -47,6 +47,8 @@ The purpose of the lab is to create an isolated environment where cybersecurity,
 7-Zip was installed to allow extraction of the Kali Linux virtual machine files, which were provided in a compressed ".7z" archive.
 
 Tool Used: 7-Zip
+# Step 2: Install VirtualBox
+VitualBox was installed as a hypervisor which is used to manage virtual machines
 
 # Step 3: Configure the NAT Network
 
@@ -58,6 +60,7 @@ Network Configuration:
 - IPv4 Network: "10.0.0.0/24"
 - DHCP: Enabled
 - IPv6: Disabled
+  ![image alt](https://github.com/Sama-41/Cybersecurity-Lab-Setup/blob/main/Screenshot-%202.png?raw=true)
 
 
 # Step 4: Import Kali Linux
