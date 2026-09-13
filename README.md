@@ -60,6 +60,7 @@ Network Configuration:
 - IPv4 Network: "10.0.0.0/24"
 - DHCP: Enabled
 - IPv6: Disabled
+  
   ![image alt](https://github.com/Sama-41/Cybersecurity-Lab-Setup/blob/main/Screenshot-%202.png?raw=true)
 
 
@@ -75,12 +76,38 @@ Network Adapter Configuration:
 - Connection Type: NAT Network
 - Network: "NatNetwork"
 - Adapter Type: Intel PRO/1000 MT Desktop
+
+  
 ![image alt](https://github.com/Sama-41/Cybersecurity-Lab-Setup/blob/main/Screenshot_3.png?raw=true)
 
 # Step 5: Configure Kali Linux Network
+Start the Kali Linux virtual machine and inspect its network configuration.
 
-  
+The laboratory uses a private IPv4 configuration similar to:
+
+IP address: 10.0.0.2
+Subnet mask: 255.255.255.0
+Default gateway: 10.0.0.1
+DNS server: 8.8.8.8
+
+The exact procedure for entering these values may depend on the version of Kali Linux and the network-management software being used.
+After making the configuration changes, reconnect the network or restart the relevant networking service if necessary.
+A consistent IP address makes the machine easier to identify when completing later laboratory exercises.
+
 ![image alt]()
+
+# Step 6 – Create a Baseline Snapshot
+Once Kali Linux has been configured and tested, create a VirtualBox snapshot.
+
+Give the snapshot a descriptive name, such as:
+
+Clean Kali - Network Setup
+
+This snapshot represents the working state of the laboratory immediately after the initial setup.
+
+If a later experiment modifies the operating system or networking configuration, the VM can be returned to this known-good state instead of rebuilding the environment from the beginning.
+  
+
 
 
 
