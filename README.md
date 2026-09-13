@@ -35,7 +35,7 @@ The purpose of the lab is to create an isolated environment where cybersecurity,
 
 ## Network Topology
 
-![image alt](https://github.com/Sama-41/Cybersecurity-Lab-Setup/blob/b62d8ef8dc9aed3b604ed25278c8720ad245cd9e/Screenshot%20(29).png)
+![image alt](https://github.com/Sama-41/Cybersecurity-Lab-Setup/blob/main/Screenshot_1.png?raw=true)
 
 
  
